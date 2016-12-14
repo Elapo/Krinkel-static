@@ -28,7 +28,7 @@ var keywords=[
     },
     {
 	id:"#deadline",
-	keywords:['inschrijving', 'deadline']
+	keywords:['inschrijving', 'deadline', 'annuleren', 'annulatie', 'terugbetaling']
     },
     {
 	id:"#VB",

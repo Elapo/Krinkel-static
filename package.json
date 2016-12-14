@@ -16,5 +16,9 @@
     "gulp-sourcemaps": "^1.6.0",
     "sassdoc": "^2.1.20",
     "tiny-lr": "^0.2.1"
+  },
+  "dependencies": {
+    "browser-sync": "^2.18.5",
+    "gulp": "^3.9.1"
   }
 }

@@ -615,6 +615,88 @@ body {
   min-height: 88px;
 }
 
+.faqPageMainImage {
+  height: 500px;
+  width: 100%;
+  background: url("../../img/layout/faq.jpg") no-repeat 50% 30%;
+  background-size: cover;
+  border-bottom: 1px solid #309583;
+}
+
+@media only screen and (min-width: 1930px) {
+  .faqPageMainImage {
+    background-position: 50% 30% !important;
+  }
+}
+
+.faqPageSearchWrapper {
+  text-align: center;
+  max-width: 900px;
+  margin: 20px auto 0;
+}
+
+.faqPageSearchWrapper .faqPageSearchBar {
+  width: 80%;
+  float: left;
+  border: 1px solid #aaaaaa;
+  padding: 5px;
+  padding-right: 0;
+  margin-left: 5px;
+  border-radius: 5px 5px;
+}
+
+.faqPageSearchWrapper .btn {
+  box-shadow: none;
+}
+
+@media (max-width: 993px) {
+  .faqPageSearchWrapper {
+    margin: 30px;
+  }
+  .faqPageSearchWrapper .faqPageSearchBar {
+    width: 100%;
+    float: none;
+  }
+}
+
+.table-of-contents a.active {
+  border-left: 2px solid #309583 !important;
+}
+
+.table-of-contents a:hover {
+  border-left: 1px solid #309583 !important;
+}
+
+.pin-top {
+  position: relative;
+}
+
+.redToast {
+  background-color: #FF1744;
+}
+
+.faqSpacer {
+  height: 50px;
+}
+
+.faqTitle {
+  color: #309583;
+}
+
+.contactPageMainImage {
+  height: 500px;
+  width: 100%;
+  background: url("../../img/layout/contact.jpg") no-repeat 50% 30%;
+  background-size: cover;
+  border-bottom: 1px solid #309583;
+}
+
+@media only screen and (min-width: 1930px) {
+  .contactPageMainImage {
+    background-position: 50% 30% !important;
+  }
+}
+
 footer {
   background-color: #000;
   border-top: 1px solid #309583;
