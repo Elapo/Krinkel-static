@@ -1,0 +1,54 @@
+input[type=button], button {
+
+}
+
+.landingPageKrinkelSignUpButtonWrapper {
+  margin: 0 0 50px 0;
+}
+
+.landingPageKrinkelSignUpButton {
+  background-color: $darkYellow;
+  color: $white;
+  width: auto;
+  letter-spacing: 3px;
+  &:hover {
+    background-color: darken($darkYellow, 20%);
+  }
+}
+
+.landingPageMainImageScrollButton {
+  width: 100%;
+  height: 70px;
+  text-align: center;
+  bottom: 70px;
+  position: relative;
+  a {
+    height: 100%;
+    & i {
+      font-size: 80px;
+      color: $white;
+      height: 100%;
+      &:hover {
+        color: $hoofdkleur;
+        font-size: 85px;
+      }
+      &:active {
+        color: $darkGreen;
+      }
+    }
+  }
+}
+
+.landingPageInfoPracticalInfoButtonWrapper {
+  margin-top: 40px;
+}
+
+.landingPageKrinkelInfoButton {
+  background-color: $darkYellow;
+  color: $white;
+  width: auto;
+  letter-spacing: 3px;
+  &:hover {
+    background-color: darken($darkYellow, 20%);
+  }
+}

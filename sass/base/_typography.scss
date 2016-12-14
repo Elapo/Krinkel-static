@@ -1,0 +1,38 @@
+@font-face {
+    font-family: RobotoCondensed;
+    src: url(../../fonts/RobotoCondensed-Regular.ttf);
+}
+
+@font-face {
+    font-family: aleo;
+    src: url(../../fonts/Aleo_font_v1.2.2/WebfontKit/Regular/aleo-regular-webfont.ttf);
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 78px;
+}
+
+h2 {
+    font-size: 36px;
+    line-height: 58px;
+}
+
+h3 {
+    font-size: 28px;
+    line-height: 45px;
+}
+
+h4 {
+    font-size: 18px;
+    line-height: 29px;
+}
+
+h5 {
+    font-size: 14px;
+    line-height: 23px;
+}
+
+b {
+    font-weight: 600;
+}

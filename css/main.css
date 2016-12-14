@@ -1,0 +1,723 @@
+/*
+    "One file to rule them all,
+    One file to find them,
+    One file to bring them all,
+    And in the Sass way merge them."
+        -- J.R.R. Tolkien
+*/
+/* SASS Utilities
+========================================================================== */
+/* Vendors And External Stylesheets
+========================================================================== */
+/* Base Files
+========================================================================== */
+@font-face {
+  font-family: RobotoCondensed;
+  src: url(../../fonts/RobotoCondensed-Regular.ttf);
+}
+
+@font-face {
+  font-family: aleo;
+  src: url(../../fonts/Aleo_font_v1.2.2/WebfontKit/Regular/aleo-regular-webfont.ttf);
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 78px;
+}
+
+h2 {
+  font-size: 36px;
+  line-height: 58px;
+}
+
+h3 {
+  font-size: 28px;
+  line-height: 45px;
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 29px;
+}
+
+h5 {
+  font-size: 14px;
+  line-height: 23px;
+}
+
+b {
+  font-weight: 600;
+}
+
+/* Layout related stylesheets
+========================================================================== */
+* {
+  box-sizing: border-box;
+}
+
+.clearfix:after {
+  content: ' ';
+  /* Older browser do not support empty content */
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.greenText {
+  color: #309583;
+}
+
+blockquote {
+  border-left: 5px solid #309583;
+}
+
+.marginTopBot30 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.marginLeft15 {
+  margin-left: 15px;
+}
+
+.borderTop1pxHoofdkleur {
+  border-top: 1px solid #309583;
+}
+
+html {
+  height: 100%;
+}
+
+header {
+  height: 100px;
+  width: 100%;
+  position: absolute;
+}
+
+nav {
+  background-color: transparent;
+  box-shadow: none;
+  height: 100px;
+}
+
+nav .nav-wrapper {
+  padding: 0 20px;
+}
+
+nav .nav-wrapper .hide-on-med-and-down ul,
+nav .nav-wrapper .hide-on-med-and-down li,
+nav .nav-wrapper .hide-on-med-and-down a {
+  height: 100%;
+}
+
+nav .nav-wrapper .hide-on-med-and-down li a {
+  padding-top: 19px;
+  letter-spacing: 2px;
+}
+
+nav .nav-wrapper .hide-on-med-and-down li a:hover {
+  background-color: transparent;
+  color: #309583;
+}
+
+nav .nav-wrapper .hide-on-med-and-down li a:active {
+  color: #006b5e;
+}
+
+nav .nav-wrapper .hide-on-med-and-down li a svg {
+  fill: white;
+}
+
+nav .nav-wrapper .hide-on-med-and-down li a:hover > svg {
+  fill: #309583;
+}
+
+nav a.button-collapse i {
+  font-size: 45px;
+  padding: 5px 10px 0 10px;
+  line-height: 64px;
+}
+
+nav a.button-collapse i:hover {
+  color: #006b5e;
+}
+
+nav svg {
+  fill: #006b5e;
+  height: 20px;
+  width: 20px;
+}
+
+nav:hover {
+  fill: white;
+}
+
+.brand-logo .logoDate {
+  vertical-align: middle;
+  letter-spacing: 2px;
+  font-size: 1rem;
+}
+
+.brand-logo:hover > .logoDate {
+  color: #309583;
+}
+
+.brand-logo:active > .logoDate {
+  color: #006b5e;
+}
+
+.brand-logo img {
+  border-radius: 50%;
+  width: 100px;
+  vertical-align: middle;
+}
+
+.sideNavLogo {
+  width: 200px;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 100px);
+}
+
+.side-nav {
+  padding-top: 200px;
+}
+
+.side-nav li a {
+  padding-left: 10%;
+  color: #006b5e;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.side-nav a:hover {
+  background-color: #a4ccbc;
+}
+
+.side-nav .active {
+  background-color: #309583;
+  color: white;
+}
+
+.side-nav svg {
+  vertical-align: middle;
+}
+
+@media only screen and (max-width: 992px) {
+  .brand-logo img {
+    width: 150px;
+  }
+  nav .brand-logo {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    right: 0;
+  }
+  nav .brand-logo img {
+    float: right;
+  }
+}
+
+body {
+  height: 100%;
+  font-family: RobotoCondensed, sans-serif;
+  line-height: 29px;
+  font-size: 18px;
+  background-color: white;
+}
+
+.landingPageMainImage {
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: 0% 20%;
+  background-image: url("../../img/layout/BRU_9436.jpg");
+  background-size: cover;
+  border-bottom: 1px solid #309583;
+}
+
+.landingPageMainImageFilter {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.landingPageMainImageText {
+  height: 100%;
+  width: 100%;
+  z-index: 9999;
+  color: white;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.landingPageMainImageText h1 {
+  top: 40%;
+  position: relative;
+  font-size: 48px;
+  line-height: 64px;
+  letter-spacing: 5px;
+  padding: 0 5px;
+}
+
+@media only screen and (min-width: 540px) {
+  .landingPageMainImageText h1 {
+    font-size: 60px;
+    line-height: 97px;
+  }
+}
+
+.landingPageSignUpWrapper {
+  max-width: 800px;
+  margin: 50px auto 75px;
+}
+
+.landingPageKrinkelSignUpTextWrapper {
+  width: 100%;
+  margin: 50px 0;
+}
+
+.landingPageKrinkelSlagzin2Wrapper {
+  max-width: 350px;
+  min-width: 250px;
+  margin: 0 auto;
+}
+
+.landingPageKrinkelSlagzin2Image {
+  width: 100%;
+  height: auto;
+}
+
+.landingPageKrinkelSlagzin2Date {
+  margin-top: -30px;
+  padding-bottom: 20px;
+}
+
+.landingPageKrinkelSignUpText {
+  padding: 10px;
+}
+
+.landingPageCarouselWrapper {
+  max-height: 100%;
+  height: 750px !important;
+  border-top: 1px solid #309583;
+}
+
+.landingPageCarouselWrapper .indicators {
+  border-bottom: 1px solid #309583;
+}
+
+.landingPageCarouselWrapper .carousel {
+  height: 100%;
+  position: relative;
+}
+
+.landingPageCarouselWrapper .carousel .carousel-item .gal2, .landingPageCarouselWrapper .carousel .carousel-item .gal3, .landingPageCarouselWrapper .carousel .carousel-item .gal4, .landingPageCarouselWrapper .carousel .carousel-item .gal5, .landingPageCarouselWrapper .carousel .carousel-item .gal7, .landingPageCarouselWrapper .carousel .carousel-item .gal8 {
+  height: 100%;
+  background: no-repeat center center;
+  background-size: cover;
+}
+
+.landingPageCarouselWrapper .carousel .carousel-item .gal1 {
+  height: 100%;
+  background: no-repeat 50% 25%;
+  background-size: cover;
+}
+
+.landingPageCarouselWrapper .carousel .carousel-item .gal6 {
+  height: 100%;
+  background: no-repeat 100% 100%;
+  background-size: cover;
+}
+
+.landingPageCarouselWrapper .carousel .carousel-item .gal1 {
+  background-image: url("/img/graphic/gallery/gal1.jpg");
+  background-color: #309583;
+}
+
+.landingPageCarouselWrapper .carousel .carousel-item .gal2 {
+  background-image: url("/img/graphic/gallery/gal2.jpg");
+  background-color: #309583;
+}
+
+.landingPageCarouselWrapper .carousel .carousel-item .gal3 {
+  background-image: url("/img/graphic/gallery/gal3.jpg");
+  background-color: #309583;
+}
+
+.landingPageCarouselWrapper .carousel .carousel-item .gal4 {
+  background-image: url("/img/graphic/gallery/gal4.jpg");
+  background-color: #309583;
+}
+
+.landingPageCarouselWrapper .carousel .carousel-item .gal5 {
+  background-image: url("/img/graphic/gallery/gal5.jpg");
+  background-color: #309583;
+}
+
+.landingPageCarouselWrapper .carousel .carousel-item .gal6 {
+  background-image: url("/img/graphic/gallery/gal6.jpg");
+  background-color: #309583;
+}
+
+.landingPageCarouselWrapper .carousel .carousel-item .gal7 {
+  background-image: url("/img/graphic/gallery/gal7.jpg");
+  background-color: #309583;
+}
+
+.landingPageCarouselWrapper .carousel .carousel-item .gal8 {
+  background-image: url("/img/graphic/gallery/gal8.jpg");
+  background-color: #309583;
+}
+
+.landingPageInfoWrapper {
+  max-width: 800px;
+  margin: 0 auto 30px;
+}
+
+.landingPageInfoTitleBanner {
+  margin-top: 75px;
+  height: 105px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(/img/layout/krinkel.png);
+}
+
+.landingPageInfoText {
+  margin-top: 50px;
+  padding: 10px;
+}
+
+.landingPageInfoIconsWrapper {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 75px;
+}
+
+.icon1Wrapper,
+.icon2Wrapper,
+.icon3Wrapper,
+.icon4Wrapper,
+.icon5Wrapper,
+.icon6Wrapper,
+.icon7Wrapper,
+.icon8Wrapper {
+  height: 200px;
+  width: 200px;
+  display: inline-block;
+  margin: 20px 49px 0 49px;
+}
+
+.logo1,
+.logo2,
+.logo3,
+.logo4,
+.logo5,
+.logo6,
+.logo7,
+.logo8 {
+  height: 100%;
+  background: no-repeat center;
+}
+
+.logo1 {
+  background-image: url(/img/layout/1985.png);
+}
+
+.logo2 {
+  background-image: url(/img/layout/1990.png);
+}
+
+.logo3 {
+  background-image: url(/img/layout/1995.png);
+}
+
+.logo4 {
+  background-image: url(/img/layout/2000.png);
+}
+
+.logo5 {
+  background-image: url(/img/layout/2004.png);
+}
+
+.logo6 {
+  background-image: url(/img/layout/2009.png);
+}
+
+.logo7 {
+  background-image: url(/img/layout/2013.png);
+}
+
+.logo8 {
+  background-image: url(/img/graphic/logos/KRINKEL_full_COLOR_small.png);
+}
+
+.icon1,
+.icon2,
+.icon3,
+.icon4,
+.icon5,
+.icon6 {
+  height: 80%;
+  background: no-repeat center;
+}
+
+.icon1Description,
+.icon2Description,
+.icon3Description,
+.icon4Description,
+.icon5Description,
+.icon6Description {
+  height: 20%;
+  letter-spacing: 2px;
+}
+
+.icon1 {
+  background-image: url("/img/layout/icon1.png");
+}
+
+.icon2 {
+  background-image: url("/img/layout/icon2.png");
+}
+
+.icon3 {
+  background-image: url("/img/layout/icon3.png");
+}
+
+.icon4 {
+  background-image: url("/img/layout/icon4.png");
+}
+
+.icon5 {
+  background-image: url("/img/layout/icon5.png");
+}
+
+.icon6 {
+  background-image: url("/img/layout/icon6.png");
+}
+
+.aboutPageMainImage {
+  height: 500px;
+  width: 100%;
+  background: url("../../img/layout/Onthaal1.jpg") no-repeat 50% 30%;
+  background-size: cover;
+  border-bottom: 1px solid #309583;
+}
+
+.aboutPageHistoriekWrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.aboutPageHistoriekWrapper h2 {
+  text-align: center;
+}
+
+.aboutPageHistoriekWrapper strong {
+  font-weight: 600;
+}
+
+.aboutPageInfoIconsWrapper {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.aboutPageInfoTitleBanner {
+  margin: 75px 0 50px 0;
+  height: 105px;
+  background: url(/img/layout/geschiedenis.png) no-repeat center;
+}
+
+.aboutPageHerexamensWrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.aboutPageHerexamenTitleBanner {
+  margin: 75px 0 50px 0;
+  height: 105px;
+  background: url(/img/layout/emptyBanner.png) no-repeat center;
+  position: relative;
+}
+
+.aboutPageHerexamenBannerTitle {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  font-family: aleo, sans-serif;
+  font-weight: 600;
+  font-size: 35px;
+  color: white;
+  position: absolute;
+  top: calc(50% - 14px);
+  -webkit-transform: rotate(-3deg);
+          transform: rotate(-3deg);
+}
+
+.aboutPageTeamWrapper {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.aboutPageTeamIcon {
+  height: 200px;
+  width: 200px;
+  display: inline-block;
+  margin: 20px 10px 0 10px;
+  border: 1px solid #309583;
+  vertical-align: top;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.aboutPageTeamIcon .aboutPageTeamIconTitle {
+  font-weight: 600;
+  background-color: #a4ccbc;
+  padding: 10px;
+  border-bottom: 1px solid #309583;
+}
+
+.aboutPageTeamIcon a {
+  color: #309583;
+}
+
+.aboutPageTeamIcon a:hover {
+  color: #006b5e;
+}
+
+.aboutPageTeamIcon:hover {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  -webkit-transition: box-shadow 0.15s ease-in-out;
+  transition: box-shadow 0.15s ease-in-out;
+}
+
+.aboutPageTeamBannerTitle {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  font-family: aleo, sans-serif;
+  font-weight: 600;
+  font-size: 35px;
+  color: white;
+  position: absolute;
+  top: calc(50% - 14px);
+  -webkit-transform: rotate(-3deg);
+          transform: rotate(-3deg);
+  left: 0;
+}
+
+.aboutPageTeamNames {
+  border-bottom: 1px solid #a4ccbc;
+  min-height: 88px;
+}
+
+footer {
+  background-color: #000;
+  border-top: 1px solid #309583;
+  color: white;
+  text-align: center;
+  padding: 50px;
+}
+
+footer a {
+  color: white;
+}
+
+footer a:hover {
+  color: #309583;
+}
+
+footer div {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+}
+
+footer div:first-child {
+  float: left;
+}
+
+footer div:last-child {
+  float: right;
+}
+
+@media only screen and (max-width: 750px) {
+  footer div {
+    text-align: center;
+    display: block;
+    margin-bottom: 75px;
+  }
+  footer div:first-child, footer div:last-child {
+    float: none;
+  }
+}
+
+/* Components and Modules - Re-usable site elements.
+========================================================================== */
+.landingPageKrinkelSignUpButtonWrapper {
+  margin: 0 0 50px 0;
+}
+
+.landingPageKrinkelSignUpButton {
+  background-color: #edc952;
+  color: white;
+  width: auto;
+  letter-spacing: 3px;
+}
+
+.landingPageKrinkelSignUpButton:hover {
+  background-color: #c59c14;
+}
+
+.landingPageMainImageScrollButton {
+  width: 100%;
+  height: 70px;
+  text-align: center;
+  bottom: 70px;
+  position: relative;
+}
+
+.landingPageMainImageScrollButton a {
+  height: 100%;
+}
+
+.landingPageMainImageScrollButton a i {
+  font-size: 80px;
+  color: white;
+  height: 100%;
+}
+
+.landingPageMainImageScrollButton a i:hover {
+  color: #309583;
+  font-size: 85px;
+}
+
+.landingPageMainImageScrollButton a i:active {
+  color: #006b5e;
+}
+
+.landingPageInfoPracticalInfoButtonWrapper {
+  margin-top: 40px;
+}
+
+.landingPageKrinkelInfoButton {
+  background-color: #edc952;
+  color: white;
+  width: auto;
+  letter-spacing: 3px;
+}
+
+.landingPageKrinkelInfoButton:hover {
+  background-color: #c59c14;
+}
+
+/* Page-specific stylesheets
+========================================================================== */
+/* Themes
+========================================================================== */
+
+/*# sourceMappingURL=maps/main.css.map */

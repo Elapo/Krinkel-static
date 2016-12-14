@@ -1,0 +1,35 @@
+* {
+    @include box-sizing(border-box);
+    
+    // TODO: verwijder dit, enkel gebruikt om te developen
+    //background-color: rgba(0,0,0,.2);
+}
+
+.clearfix:after {
+   content: ' '; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+.greenText {
+  color: $hoofdkleur;
+}
+
+blockquote {
+  border-left: 5px solid $hoofdkleur;
+}
+
+.marginTopBot30{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.marginLeft15 {
+  margin-left: 15px;
+}
+
+.borderTop1pxHoofdkleur {
+  border-top: 1px solid $hoofdkleur;
+}

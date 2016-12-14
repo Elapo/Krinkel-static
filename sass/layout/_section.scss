@@ -1,0 +1,386 @@
+section {
+
+}
+
+.landingPageMainImage {
+  height: 100%; //750px
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: 0% 20%;
+  background-image: url("../../img/layout/BRU_9436.jpg");
+  background-size: cover;
+  border-bottom: 1px solid $hoofdkleur;
+}
+
+.landingPageMainImageFilter {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,.3);
+}
+
+.landingPageMainImageText {
+  height: 100%;
+  width: 100%;
+  z-index: 9999;
+  color: $white;
+  text-shadow: 0 5px 10px rgba(0,0,0,.5);
+  h1 {
+    top: 40%;
+    position: relative;
+    font-size: 48px;
+    line-height: 64px;
+    letter-spacing: 5px;
+    padding: 0 5px;
+  }
+  @media only screen and (min-width: 540px) {
+    h1 {
+      font-size: 60px;
+      line-height: 97px;
+    }
+  }
+}
+
+.landingPageSignUpWrapper {
+  max-width: $contentWidth;
+  margin: 50px auto 75px;
+}
+
+.landingPageKrinkelSignUpTextWrapper {
+  width: 100%;
+  margin: 50px 0;
+}
+
+.landingPageKrinkelSlagzin2Wrapper {
+  max-width: 350px;
+  min-width: 250px;
+  margin: 0 auto;
+}
+
+.landingPageKrinkelSlagzin2Image {
+  width: 100%;
+  height: auto;
+}
+
+.landingPageKrinkelSlagzin2Date {
+  margin-top: -30px;
+  padding-bottom: 20px;
+}
+
+.landingPageKrinkelSignUpText {
+  padding: 10px;
+}
+
+.landingPageCarouselWrapper {
+  max-height: 100%;
+  height: 750px !important;
+  border-top: 1px solid $hoofdkleur;
+  .indicators {
+    border-bottom: 1px solid $hoofdkleur;
+  }
+  .carousel {
+    height: 100%;
+    position: relative;
+    .carousel-item {
+       .gal2, .gal3, .gal4, .gal5, .gal7, .gal8 {
+         height: 100%;
+         background: no-repeat center center;
+         background-size: cover;
+      }
+      .gal1 {
+        height: 100%;
+        background: no-repeat 50% 25%;
+        background-size: cover;
+      }
+      .gal6 {
+        height: 100%;
+        background: no-repeat 100% 100%;
+        background-size: cover;
+      }
+
+      @include generateGalClassNImages(8);
+    }
+  }
+}
+
+.landingPageInfoWrapper {
+  max-width: $contentWidth;
+  margin: 0 auto 30px;
+}
+
+.landingPageInfoTitleBanner {
+  margin-top: 75px;
+  height: 105px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(/img/layout/krinkel.png);
+}
+
+.landingPageInfoText {
+  margin-top: 50px;
+  padding: 10px;
+}
+
+.landingPageInfoIconsWrapper {
+  text-align: center;
+  max-width: $contentWidth + 100px;
+  margin: 0 auto 75px;
+}
+
+.icon1Wrapper,
+.icon2Wrapper,
+.icon3Wrapper,
+.icon4Wrapper,
+.icon5Wrapper,
+.icon6Wrapper,
+.icon7Wrapper,
+.icon8Wrapper {
+  height: 200px;
+  width: 200px;
+  display: inline-block;
+  margin: 20px 49px 0 49px;
+}
+
+.logo1,
+.logo2,
+.logo3,
+.logo4,
+.logo5,
+.logo6,
+.logo7,
+.logo8 {
+  height: 100%;
+  background: no-repeat center;
+}
+
+.logo1 {
+  background-image: url(/img/layout/1985.png);
+}
+
+.logo2 {
+  background-image: url(/img/layout/1990.png);
+}
+
+.logo3 {
+  background-image: url(/img/layout/1995.png);
+}
+
+.logo4 {
+  background-image: url(/img/layout/2000.png);
+}
+
+.logo5 {
+  background-image: url(/img/layout/2004.png);
+}
+
+.logo6 {
+  background-image: url(/img/layout/2009.png);
+}
+
+.logo7 {
+  background-image: url(/img/layout/2013.png);
+}
+
+.logo8 {
+  background-image: url(/img/graphic/logos/KRINKEL_full_COLOR_small.png);
+}
+
+.icon1,
+.icon2,
+.icon3,
+.icon4,
+.icon5,
+.icon6 {
+  height: 80%;
+  background: no-repeat center;
+}
+.icon1Description,
+.icon2Description,
+.icon3Description,
+.icon4Description,
+.icon5Description,
+.icon6Description {
+  height: 20%;
+  letter-spacing: 2px;
+}
+
+@include generateIconClassNImages(6);
+
+.aboutPageMainImage {
+  height: 500px;
+  width: 100%;
+  background: url("../../img/layout/Onthaal1.jpg") no-repeat 50% 30%;
+  background-size: cover;
+  border-bottom: 1px solid $hoofdkleur;
+}
+
+.aboutPageHistoriekWrapper {
+  max-width: $contentWidth;
+  margin: 0 auto;
+  padding: 10px;
+  h2 {
+    text-align: center;
+  }
+  strong {
+    font-weight: 600;
+  }
+}
+
+.aboutPageInfoIconsWrapper {
+  text-align: center;
+  max-width: $contentWidth + 100px;
+  margin: 0 auto;
+}
+
+.aboutPageInfoTitleBanner {
+  margin: 75px 0 50px 0;
+  height: 105px;
+  background: url(/img/layout/geschiedenis.png) no-repeat center;
+}
+
+.aboutPageHerexamensWrapper {
+  max-width: $contentWidth;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.aboutPageHerexamenTitleBanner {
+  margin: 75px 0 50px 0;
+  height: 105px;
+  background: url(/img/layout/emptyBanner.png) no-repeat center;
+  position: relative;
+}
+
+.aboutPageHerexamenBannerTitle {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  font-family: aleo, sans-serif;
+  font-weight: 600;
+  font-size: 35px;
+  color: $white;
+  position: absolute;
+  top: calc(50% - 14px);
+  transform: rotate(-3deg);
+}
+
+.aboutPageTeamWrapper {
+  text-align: center;
+  max-width: $contentWidth + 100px;
+  margin: 0 auto;
+}
+
+.aboutPageTeamIcon {
+  height: 200px;
+  width: 200px;
+  display: inline-block;
+  margin: 20px 10px 0 10px;
+  border: 1px solid $hoofdkleur;
+  vertical-align: top;
+  border-radius: 20px;
+  overflow: hidden;
+  .aboutPageTeamIconTitle {
+    font-weight: 600;
+    background-color: $lightGreen;
+    padding: 10px;
+    border-bottom: 1px solid $hoofdkleur;
+  }
+  a {
+    color: $hoofdkleur;
+    &:hover {
+      color: $darkGreen;
+    }
+  }
+  &:hover {
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14),0 1px 10px 0 rgba(0,0,0,0.12),0 2px 4px -1px rgba(0,0,0,0.3);
+    transition: box-shadow 0.15s ease-in-out;
+  }
+}
+
+.aboutPageTeamBannerTitle {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  font-family: aleo, sans-serif;
+  font-weight: 600;
+  font-size: 35px;
+  color: $white;
+  position: absolute;
+  top: calc(50% - 14px);
+  transform: rotate(-3deg);
+  left: 0;
+}
+
+.aboutPageTeamNames {
+  border-bottom: 1px solid $lightGreen;
+  min-height: 88px;
+}
+
+.faqPageMainImage {
+  height: 500px; //750px
+  width: 100%;
+  background: url("../../img/layout/faq.jpg") no-repeat 50% 30%;
+  background-size: cover;
+  border-bottom: 1px solid $hoofdkleur;
+  @media only screen and (min-width: 1930px) {
+    background-position: 50% 30% !important;
+  }
+}
+
+.faqPageSearchWrapper {
+  text-align: center;
+  max-width: $contentWidth + 100px;
+  margin: 20px auto 0;
+
+  .faqPageSearchBar{
+    width: 80%;
+    float: left;
+    border: 1px solid #aaaaaa;
+    padding: 5px;
+    padding-right: 0;
+    margin-left: 5px;
+    border-radius: 5px 5px;
+  }
+  .btn {
+    box-shadow: none;
+  }
+}
+@media (max-width: 993px) {
+
+  .faqPageSearchWrapper {
+    margin: 30px;
+
+    .faqPageSearchBar {
+      width: 100%;
+      float:none;
+    }
+  }
+}
+.table-of-contents a.active {
+  border-left: 2px solid $hoofdkleur !important;
+}
+.table-of-contents a:hover{
+  border-left: 1px solid $hoofdkleur !important;
+}
+.pin-top {
+  position: relative;
+}
+.redToast {
+  background-color: #FF1744;
+}
+.faqSpacer {
+  height: 50px;
+}
+.faqTitle{
+  color:$hoofdkleur;
+}
+
+.contactPageMainImage{
+  height: 500px; //750px
+  width: 100%;
+  background: url("../../img/layout/contact.jpg") no-repeat 50% 30%;
+  background-size: cover;
+  border-bottom: 1px solid $hoofdkleur;
+  @media only screen and (min-width: 1930px) {
+    background-position: 50% 30% !important;
+  }
+}

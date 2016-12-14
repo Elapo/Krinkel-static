@@ -1,0 +1,110 @@
+nav {
+    background-color: transparent;
+    box-shadow: none;
+    height: 100px;
+    .nav-wrapper {
+      padding: 0 20px;
+      .hide-on-med-and-down ul,
+      .hide-on-med-and-down li,
+      .hide-on-med-and-down a {
+          height: 100%;
+        }
+      .hide-on-med-and-down li a {
+          padding-top: 19px;
+          letter-spacing: 2px;
+        }
+      .hide-on-med-and-down li a:hover {
+            background-color: rgba(0,0,0,0);
+            color: $hoofdkleur;
+      }
+      .hide-on-med-and-down li a:active {
+          color: $darkGreen;
+      }
+      .hide-on-med-and-down li a {
+        svg {
+          fill: $white;
+        }
+      }
+      .hide-on-med-and-down li a:hover > svg {
+        fill: $hoofdkleur;
+      }
+    }
+  a.button-collapse i {
+    font-size: 45px;
+    padding: 5px 10px 0 10px;
+    line-height: 64px;
+    &:hover {
+      color: $darkGreen;
+    }
+  }
+  svg {
+
+    fill: $darkGreen;
+    height: 20px;
+    width: 20px;
+  }
+  &:hover {
+    fill: $white;
+  }
+}
+
+.brand-logo {
+  .logoDate {
+    vertical-align: middle;
+    letter-spacing: 2px;
+    font-size: 1rem;
+  }
+  &:hover > .logoDate {
+    color: $hoofdkleur;
+  }
+  &:active > .logoDate {
+    color: $darkGreen;
+  }
+  img {
+    border-radius: 50%;
+    width: 100px;
+    vertical-align: middle;
+  }
+}
+
+.sideNavLogo {
+      width: 200px;
+      position: absolute;
+      top: 0;
+      left: calc(50% - 100px);
+}
+
+.side-nav {
+  padding-top: 200px;
+  li a {
+    padding-left: 10%;
+    color: $darkGreen;
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+  a:hover {
+    background-color: $lightGreen;
+
+  }
+  .active {
+    background-color: $hoofdkleur;
+    color: $white;
+  }
+
+  svg {
+    vertical-align: middle;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .brand-logo img {
+    width: 150px;
+  }
+  nav .brand-logo {
+    transform: translateX(0);
+    right: 0;
+    img {
+      float: right;
+    }
+  }
+}
