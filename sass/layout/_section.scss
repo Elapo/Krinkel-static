@@ -316,7 +316,7 @@ section {
 }
 
 .faqPageMainImage {
-  height: 500px; //750px
+  height: 500px;
   width: 100%;
   background: url("../../img/layout/faq.jpg") no-repeat 50% 30%;
   background-size: cover;
@@ -324,6 +324,14 @@ section {
   @media only screen and (min-width: 1930px) {
     background-position: 50% 30% !important;
   }
+}
+
+.row .col {
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto 75px !important;
 }
 
 .faqPageSearchWrapper {
