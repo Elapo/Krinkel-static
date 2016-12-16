@@ -71,6 +71,7 @@ function findInPage(seachText){
 	}
 }
 
+
 function fallback(searchText){
     console.log("No results, running fallback...");
     let searchBar = $("#searchBarFaq");
@@ -88,6 +89,8 @@ function fallback(searchText){
 	}
     searchBar.val(searchText);
 }
+
+
 
 function showError(){
 	//show an error about using ctrl-F/find in page
@@ -116,7 +119,7 @@ function showError(){
 	}
 	Materialize.toast(message, 5000, 'redToast');
 }
-
+//from SO - utility functions
 function getMobileOperatingSystem() {
   var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
@@ -137,7 +140,25 @@ function getMobileOperatingSystem() {
     return "unknown";
 }
 
-//I got this from SO:
+//http://stackoverflow.com/questions/985272/selecting-text-in-an-element-akin-to-highlighting-with-your-mouse
+function SelectText(element) {
+    let doc = document
+        , text = doc.getElementById(element)
+        , range, selection
+        ;
+    if (doc.body.createTextRange) {
+        range = document.body.createTextRange();
+        range.moveToElementText(text);
+        range.select();
+    } else if (window.getSelection) {
+        selection = window.getSelection();
+        range = document.createRange();
+        range.selectNodeContents(text);
+        selection.removeAllRanges();
+        selection.addRange(range);
+    }
+}
+
 //http://stackoverflow.com/questions/9847580/how-to-detect-safari-chrome-ie-firefox-and-opera-browser
 
 // Opera 8.0+
