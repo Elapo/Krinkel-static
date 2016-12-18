@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="nl">
     <head>
-        <title>Krinkel - Contact</title>
+        <title>Krinkel - CONTACT</title>
         <meta charset="UTF-8"/>
         <meta name="description" content="Krinkel, Chiro, Het grootste chiro feest"/>
         <meta name="keywords" content="Krinkel"/>
@@ -26,14 +26,14 @@
         <header>
             <nav>
                 <div class="nav-wrapper">
-                    <a href="#!" class="brand-logo"><img src="img/graphic/logos/logo_KRINKEL_fullALT_BW_small.png" alt="logo Krinkel"/><span class="hide-on-med-and-down logoDate">25-30 augustus 2017</span></a>
+                    <a href="index.html" class="brand-logo"><img src="img/graphic/logos/logo_KRINKEL_fullALT_BW_small.png" alt="logo Krinkel"/><span class="hide-on-med-and-down logoDate">25-30 augustus 2017</span></a>
                     <a href="#" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
                     <ul class="right hide-on-med-and-down">
                         <li><a href="index.html">HOME</a></li>
                         <li><a href="http://localhost:8080/login" target="_blank">INSCHRIJVEN</a></li>
-                        <!--<li><a href="">GAME</a></li>-->
-                        <li><a href="">PRAKTISCH</a></li>
-                        <li><a href="">CONTACT</a></li>
+                        <li><a href="over.html">OVER</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
                         <li class="marginLeft15">
                             <a href="http://www.facebook.com/ChirojeugdVlaanderen" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="currentColor" d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"></path></svg></a>
                         </li>
@@ -50,9 +50,9 @@
                     <ul class="side-nav" id="mobile">
                         <li><a class="waves-effect waves-light borderTop1pxHoofdkleur" href="index.html">HOME</a></li>
                         <li><a class="waves-effect waves-light" href="">INSCHRIJVEN</a></li>
-                        <!--<li><a class="waves-effect waves-light" href="">GAME</a></li>-->
-                        <li><a class="waves-effect waves-light" href="">PRAKTISCH</a></li>
-                        <li><a class="waves-effect waves-light" href="">CONTACT</a></li>
+                        <li><a href="over.html" class="waves-effect waves-light">OVER</a></li>
+                        <li><a class="waves-effect waves-light active" href="faq.html">FAQ</a></li>
+                        <li><a class="waves-effect waves-light" href="contact.html">CONTACT</a></li>
                         <li>
                             <a href="http://www.facebook.com/ChirojeugdVlaanderen" target="_blank" class="waves-effect waves-green"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"></path></svg></a>
                         </li>
@@ -71,15 +71,43 @@
                 </div>
             </nav>
         </header>
-        <section id="parallax" class="contactPageMainImage">
+        <section id="parallaxFaq" class="contactPageMainImage">
             <div class="landingPageMainImageFilter">
                 <div class="landingPageMainImageText center-align">
                     <h1 style="margin: 0;">Contact</h1>
                 </div>
             </div>
         </section>
-        <section class="contactFormWrapper">
-            <div class="aboutPageHerexamenTitleBanner"><span class="aboutPageTeamBannerTitle">Nog een vraag?</span></div>
+        <section class="contactPageForm">
+            <div id="contactTitle" class="aboutPageHerexamenTitleBanner"><span class="aboutPageTeamBannerTitle">Nog een vraag?</span></div>
+            <!--<div class="contactPageTitleBanner"><span class="contactPageBannerTitle">Nog een vraag?</span></div>-->
+            <form method="post">
+                <div class="row">
+                    <div class="col s12 m5 l5">
+                        <div class="input-field">
+                            <input type="text" id="name">
+                            <label for="name">Naam</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="email" id="email">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" id="subject">
+                            <label for="subject">Onderwerp</label>
+                        </div>
+                    </div>
+                    <div class="col s12 m5 l5 push-m1 push-l1">
+                        <div class="input-field">
+                            <textarea id="messageArea" class="materialize-textarea"></textarea>
+                            <label for="messageArea">Bericht</label>
+                        </div>
+
+                    </div>
+                </div>
+                <a id="sendBtn" class="landingPageKrinkelSignUpButton waves-effect waves-light btn-large btn">VERSTUREN</a>
+                <div class="faqSpacer"></div>
+            </form>
         </section>
         <footer class="landingPageFooter">
             <div class="landingPageFooterContactData">
@@ -114,5 +142,19 @@
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="js/materialize.min.js"></script>
         <script src="js/main.js"></script>
+        <script>
+            //todo:make not inline
+            $(document).ready(function(){
+                $('.scrollspy').scrollSpy({
+                    scrollOffset: 0
+                });
+                $('.pin').pushpin({
+                    top: 650,
+                    bottom: 2500,
+                    offset: 0
+                });
+            });
+        </script>
+        <script src="js/search.js"></script>
     </body>
 </html>
